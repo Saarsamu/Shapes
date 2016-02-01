@@ -9,7 +9,7 @@ package Shapes;
  *
  * @author saarsamu
  */
-public class Ellipse {
+public class Ellipse extends Shape {
     private int a, b;
     
     public Ellipse() {
@@ -17,9 +17,14 @@ public class Ellipse {
         this.b = 0;      
     }
     
-    public Ellipse(int a, int b) {
+    public Ellipse(String name, Point place, int a, int b) {
+        super(place, name);
         setA(a);
         setB(b);
+    }
+    
+    public String toString() {
+        return super.toString() + " a: " + getA() + " b: " + getB();
     }
 
     /**

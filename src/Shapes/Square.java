@@ -10,5 +10,23 @@ package Shapes;
  * @author saarsamu
  */
 public class Square extends Rectangle{
+    public int getSide() {
+        return super.getHeight();
+    }
     
+    public void setSide(int side) {
+        super.setHeight(side);
+        super.setWidth(side);
+    } 
+    
+    public Square () {
+        this(new Point(), null, 0);
+    }
+    public Square(Point place, String name, int side) {
+        super(name, place, side, side);
+    }
+    
+    public String toString() {
+        return super.getName() + " " + super.getPlace() + " side: " + super.getHeight();
+    }
 }
