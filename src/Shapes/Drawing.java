@@ -14,8 +14,28 @@ import java.util.Map;
  * @author saarsamu
  */
 public class Drawing {
-    public static void main(String[] args) {
-        Map<String, Shape> shapes = new HashMap<>();
-    
-    
-}
+
+        private final Map<String, Shape> shapes = new HashMap<String, Shape>();
+        public Shape add(Shape s) {
+            Shape muoto = shapes.get(s.getName());
+            shapes.put(s.getName(),s);
+            return muoto;
+        }
+        
+        public Shape remove(String name) {
+            Shape muoto = shapes.get(name);
+            shapes.remove(name);
+            return muoto;
+        }
+        
+        public void list() {
+            for (Map.Entry<String, Shape> me : shapes.entrySet()) {
+                System.out.println(me.getValue() );
+        }
+            
+            //for (String key : shapes.keySet()) {
+            //    System.out.println(shapes.get(key));
+            //}
+        }
+    }
+
