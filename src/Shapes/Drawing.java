@@ -30,7 +30,7 @@ public class Drawing {
         
         public void list() {
             for (Map.Entry<String, Shape> me : shapes.entrySet()) {
-                System.out.println(me.getValue() );
+                System.out.println("Key: " + me.getKey()+ " " + "Value: " +  me.getValue() );
         }
             
             //for (String key : shapes.keySet()) {

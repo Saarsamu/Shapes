@@ -23,6 +23,7 @@ public class Ellipse extends Shape {
         setB(b);
     }
     
+    @Override
     public String toString() {
         return super.toString() + " a: " + getA() + " b: " + getB();
     }
